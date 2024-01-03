@@ -82,11 +82,25 @@ target = 9
 indices = two_sum(nums, target)
 print(f"Indices of the two numbers are: {indices}")
 
+# Reversing Array
+
+
+def reverseArray(nums):
+    for i in range(0, int(len(nums)/2)):
+        other = len(nums) - i - 1
+        temp = nums[i]
+        nums[i] = nums[other]
+        nums[other] = temp
+    print(nums)
+
+
+reverseArray(nums)
 # Question 3 - Check if an array contains a number in Python
 # Question To ask:
 # 1. Is array numbers sorted or not?
 # If it sorted linear search is suitable for task other wise binary search
 # could be suitable
+
 
 numbers_ = range(1, 21)
 numbers = np.array(numbers_)
@@ -272,6 +286,17 @@ def pair_sum(arr, target_sum):
 arr = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9]
 target_sum = 7
 print(pair_sum(arr, target_sum))  # Output: ['2+5', '4+3', '3+4', '-2+9']
+
+# Print unordered Pair list
+
+
+def printUnorderedList(array):
+    for i in range(0, len(array)):
+        for j in range(i+1, len(array)):
+            print(str(array[i]) + "," + str(array[j]))
+
+
+printUnorderedList(arr)
 
 # Given an integer array nums, return true if any value appears at
 # least twice in the array, and return false if every element is distinct.
